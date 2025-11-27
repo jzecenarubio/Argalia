@@ -4,6 +4,8 @@
     --color-accent: #ff3400;
     --color-heading: #6a49e1;
     --color-body: #33759b;
+    --color-border: lightslategray;
+    --border-radius: 30px;
 }
 
 *, *::after, *::before {
@@ -194,6 +196,37 @@ a {
 }
 @media screen and (min-width: 1024px){
     .btn {
+        font-size: 1.5rem;
+    }
+}
+
+/*Inputs*/
+.input {
+    padding: 1.5rem 3.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    color: var(--color-heading);
+    font-size: 2rem;
+    outline: 0;
+}
+::placeholder {
+    color: lightseagreen;
+}
+.input-group {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    display: flex;
+}
+.input-group .input {
+    border: 0;
+    flex-grow: 1;
+    padding: 1.5rem 1rem;
+}
+.input-group .btn {
+    margin: 4px;
+}
+@media screen and (min-width: 1024px) {
+    .input {
         font-size: 1.5rem;
     }
 }
